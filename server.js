@@ -2,7 +2,7 @@ const Aoijs = require("aoi.js")
 var fs = require('fs')
 const bot = new Aoijs.Bot({
     token: process.env['TOKEN'],
-    prefix: "PREFIX"
+    prefix: "yol!"
 })
 bot.onMessage()
 var reader = fs.readdirSync("./komutlar/").filter(file => file.endsWith(".js"))
@@ -14,8 +14,7 @@ for(const file of reader) {
     })
 } 
 bot.status({
-  text: "DARKLON #CODE", // DURUMDA YAZACAĞI METİN
-  type: "PLAYING", 
+  text: "hiçbir şey", // DURUMDA YAZACAĞI METİN
+  type: "OYNUYOR", 
   status: "online/dnd/idle", // BOTUN DURUMU
-  time: 12 // DURUM DEĞİŞME SÜRESİ
 })
