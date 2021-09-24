@@ -1,8 +1,8 @@
 const Aoijs = require("aoi.js")
 var fs = require('fs')
 const bot = new Aoijs.Bot({
-    token: process.env['TOKEN'],
-    prefix: "yol!"
+    token:process.env.TOKEN,
+    prefix:process.env.PREFIX
 })
 bot.onMessage()
 var reader = fs.readdirSync("./komutlar/").filter(file => file.endsWith(".js"))
